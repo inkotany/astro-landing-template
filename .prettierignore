@@ -1,0 +1,14 @@
+node_modules
+bun.lock
+dist
+build
+public/assets
+*.log
+.vscode
+.idea
+.DS_Store
+*.env
+*.env.local
+*.env.development
+*.env.test
+*.env.production
