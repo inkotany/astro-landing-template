@@ -1,6 +1,21 @@
 // Main site configurations from envs
 
-export const siteConfig = {
+type SiteConfig = {
+   name: string
+   url: string
+   baseUrl: string
+   description: string
+   author: string
+   xHandle?: string
+   xUrl?: string
+   githubUrl?: string
+   faceBookUrl?: string
+   linkedInUrl?: string
+   instagramUsername?: string
+   instagramUrl?: string
+}
+
+export const siteConfig: SiteConfig = {
    name: import.meta.env.PUBLIC_SITE_NAME,
    url: import.meta.env.PUBLIC_SITE_URL,
    baseUrl: import.meta.env.PUBLIC_SITE_BASE_URL || '/',

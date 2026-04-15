@@ -1,43 +1,98 @@
-# Astro Starter Kit: Minimal
+# 🚀 astro-template
 
-```sh
-bun create astro@latest -- --template minimal
+A clean, ready-to-go Astro starter with everything wired up so you can skip the boring parts and start building.
+
+---
+
+## ✨ What's included
+
+| Feature | Details |
+|---|---|
+| **Astro** | v4, strict TypeScript |
+| **React** | Islands-ready with `client:*` directives |
+| **Tailwind CSS** | Configured + class sorting on save |
+| **shadcn/ui** | Pre-init'd, just run `npx shadcn add <component>` |
+| **Path aliases** | `@/` maps to `src/` everywhere |
+| **SEO** | `astro-seo` wired into `BaseLayout`, OG + Twitter ready |
+| **robots.txt** | Dynamic endpoint, respects `PUBLIC_SITE_URL` |
+| **Prettier** | Astro + Tailwind plugins, runs on commit |
+| **Husky** | Pre-commit hook via `lint-staged` |
+| **Env config** | All site-wide values in one place |
+
+---
+
+## 🏁 Getting started
+
+```bash
+# 1. Clone and install
+git clone https://github.com/you/astro-template my-app
+cd my-app
+npm install
+
+# 2. Copy env file and fill it in
+cp .env.example .env
+
+# 3. Start dev server
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+---
 
-## 🚀 Project Structure
+## ⚙️ Environment variables
 
-Inside of your Astro project, you'll see the following folders and files:
+Edit `.env` with your site's details:
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```env
+PUBLIC_SITE_NAME="My Site"
+PUBLIC_SITE_URL="https://example.com"
+PUBLIC_SITE_DESCRIPTION="Short description for SEO"
+PUBLIC_SITE_AUTHOR="Your Name"
+PUBLIC_TWITTER_HANDLE="@yourhandle"
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+All values flow through `src/config/site.ts` — import `siteConfig` wherever you need them.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+---
 
-Any static assets, like images, can be placed in the `public/` directory.
+## 🧱 Project structure
 
-## 🧞 Commands
+```
+src/
+├── components/
+│   └── ui/          ← shadcn components go here
+├── config/
+│   └── site.ts      ← siteConfig from env vars
+├── layouts/
+│   └── BaseLayout.astro  ← SEO, fonts, global styles
+├── lib/
+│   └── utils.ts     ← cn() and other helpers
+└── pages/
+    ├── index.astro
+    └── robots.txt.ts
+```
 
-All commands are run from the root of the project, from a terminal:
+---
 
-| Command               | Action                                           |
-| :-------------------- | :----------------------------------------------- |
-| `bun install`         | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
+## 🎨 Adding shadcn components
 
-## 👀 Want to learn more?
+```bash
+npx shadcn add button
+npx shadcn add card dialog input
+```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Components land in `src/components/ui/`. Use them in `.astro` files or React islands.
+
+---
+
+## 🔧 Scripts
+
+```bash
+npm run dev        # dev server at localhost:4321
+npm run build      # production build
+npm run preview    # preview the build
+npm run format     # run prettier across everything
+```
+
+> Built with ☕ and [Astro](https://astro.build). Happy shipping.
+
+madeinterry
