@@ -127,4 +127,27 @@
    html {
       @apply font-sans;
    }
+   h1 {
+      @apply scroll-m-20 text-center text-4xl font-extrabold tracking-tight text-balance;
+   }
+
+   h2 {
+      @apply scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0;
+   }
+
+   p {
+      @apply leading-7 not-first:mt-6;
+   }
+
+   section {
+      @apply mt-10 p-4 sm:p-6 md:p-10 lg:px-24 lg:py-16;
+   }
+
+   img {
+      @apply max-md:rounded-3xl;
+   }
+
+   .section-title {
+      @apply text-secondary-foreground text-center font-serif font-medium;
+   }
 }
