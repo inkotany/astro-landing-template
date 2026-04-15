@@ -3,6 +3,8 @@ import { defineConfig } from 'astro/config'
 import react from '@astrojs/react'
 import tailwindcss from '@tailwindcss/vite'
 
+import sitemap from '@astrojs/sitemap';
+
 const site = process.env.PUBLIC_SITE_URL || 'http://localhost:4321'
 const base = process.env.PUBLIC_SITE_BASE_URL || '/'
 
@@ -10,7 +12,7 @@ const base = process.env.PUBLIC_SITE_BASE_URL || '/'
 export default defineConfig({
    site,
    base,
-   integrations: [react()],
+   integrations: [react(), sitemap()],
 
    vite: {
       plugins: [tailwindcss()],
