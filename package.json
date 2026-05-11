@@ -29,14 +29,18 @@
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier --write .",
-    "prepare": "husky"
+    "prepare": "husky",
+    "knip": "knip"
   },
   "type": "module",
   "devDependencies": {
+    "@types/node": "^25.6.2",
     "husky": "^9.1.7",
+    "knip": "^6.12.2",
     "lint-staged": "^16.4.0",
     "prettier": "^3.8.3",
     "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-tailwindcss": "^0.7.2"
+    "prettier-plugin-tailwindcss": "^0.7.2",
+    "typescript": "^6.0.3"
   }
 }
