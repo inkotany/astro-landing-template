@@ -30,7 +30,8 @@
     "astro": "astro",
     "format": "prettier --write .",
     "prepare": "husky",
-    "knip": "knip"
+    "knip": "knip",
+    "shadcn": "bunx --bun shadcn@latest add"
   },
   "type": "module",
   "devDependencies": {
